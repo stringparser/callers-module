@@ -34,13 +34,7 @@ module.exports = function(){
 
  - `frames` if specified should be an `integer` bigger than `0` or `Infinity`.
  - `origin` if specified should be a function.
- - if no arguments, the default number of `frames` is `2` so the `origin` is the module itself. The returned stack is sliced by one.
-
-See also the [avaliable methods](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) of the stack trace api like:
- - `getLineNumber`
- - `getFileName`
- - `getEvalOrigin`
- - etc.
+ - if no arguments, the default number of `frames` is `2` so the `origin` is the module itself. The stack is sliced by one.
 
 ## why
 
