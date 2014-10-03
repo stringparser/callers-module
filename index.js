@@ -45,7 +45,7 @@ function callersModule(frames, origin){
     return {
        module : moduleName,
         scope : scopeName,
-     filename : filename,
+         path : filename,
      location : location
     };
   }
@@ -65,7 +65,7 @@ function callersModule(frames, origin){
   return {
      module : moduleName,
       scope : scopeName,
-   filename : filename,
+       path : filename,
    location : location
   };
 }

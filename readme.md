@@ -22,7 +22,7 @@ module.exports = function(){
   // => {
   //    module : 'mocha',
   //     scope : 'mocha/lib',
-  //  filename : 'node_modules/mocha/lib/runnable.js',
+  //      path : 'node_modules/mocha/lib/runnable.js',
   //  location : 'node_modules/mocha/lib/runnable.js:249:21'
   // };
 }
