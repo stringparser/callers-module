@@ -4,7 +4,7 @@
 [<img alt="NPM version" src="http://img.shields.io/npm/v/callers-module.svg?style=flat-square" align="right"/>](http://www.npmjs.org/package/callers-module)
 <br>
 
-[V8 stacktrace API](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) based caller's path
+[V8 stacktrace API](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) based caller's module information
 
 ## install
 
