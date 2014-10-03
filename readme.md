@@ -1,31 +1,36 @@
-# callers-path [<img alt="progressed.io" src="http://progressed.io/bar/99" align="right"/>](https://github.com/fehmicansaglam/progressed.io)
+# callers-module [<img alt="progressed.io" src="http://progressed.io/bar/99" align="right"/>](https://github.com/fehmicansaglam/progressed.io)
 
-[<img alt="build" src="http://img.shields.io/travis/stringparser/callers-path/master.svg?style=flat-square" align="left"/>](https://travis-ci.org/stringparser/callers-path/builds)
-[<img alt="NPM version" src="http://img.shields.io/npm/v/callers-path.svg?style=flat-square" align="right"/>](http://www.npmjs.org/package/callers-path)
+[<img alt="build" src="http://img.shields.io/travis/stringparser/callers-module/master.svg?style=flat-square" align="left"/>](https://travis-ci.org/stringparser/callers-module/builds)
+[<img alt="NPM version" src="http://img.shields.io/npm/v/callers-module.svg?style=flat-square" align="right"/>](http://www.npmjs.org/package/callers-module)
 <br>
 
 [V8 stacktrace API](https://code.google.com/p/v8/wiki/JavaScriptStackTraceApi) based caller's path
 
 ## install
 
-    npm install --save callers-path
+    npm install --save callers-module
 
 ## usage
 
 ```js
 var path = require('path');
-var callerPath = require('callers-path');
+var callersModule = require('callers-module');
 
-// test/fileName.js
+// mocha test/fileName.js
 module.exports = function(){
-  console.log( path.relative(process.cwd, callerPath) );
-  // => test/fileName.js
+  console.log(callersModule());
+  // => {
+  //    module : 'mocha',
+  //     scope : 'mocha/lib',
+  //  filename : 'node_modules/mocha/lib/runnable.js',
+  //  location : 'node_modules/mocha/lib/runnable.js:249:21'
+  // };
 }
 ```
 
 ### documentation
 
-`require('callers-path')([frames, origin])`
+`require('callers-module')([frames, origin])`
 
  - `frames` if specified should be an `integer` bigger than `0` or `Infinity`.
  - `origin` if specified should be a function.
@@ -57,4 +62,4 @@ It serves for the same use cases implemented on this cool modules
 
 ### license
 
-[<img alt="LICENSE" src="http://img.shields.io/npm/l/callers-path.svg?style=flat-square"/>](http://opensource.org/licenses/MIT)
+[<img alt="LICENSE" src="http://img.shields.io/npm/l/callers-module.svg?style=flat-square"/>](http://opensource.org/licenses/MIT)

@@ -1,17 +1,21 @@
 {
-  "name": "callers-path",
+  "name": "callers-module",
   "version": "0.9.0",
-  "description": "v8 callsite caller's path with knobs",
+  "description": "v8 callsite-based caller's module with knobs",
   "main": "index.js",
   "engines": {
     "node": ">= 0.9.0"
   },
-  "repository": "stringparser/callers-path",
+  "repository": "stringparser/callers-module",
   "keywords": [
     "v8",
     "callsite",
     "callsites",
     "path",
+    "module",
+    "scope",
+    "filename",
+    "location",
     "caller"
   ],
   "author": {
@@ -19,9 +23,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stringparser/callers-path/issues"
+    "url": "https://github.com/stringparser/callers-module/issues"
   },
-  "homepage": "https://github.com/stringparser/callers-path",
+  "homepage": "https://github.com/stringparser/callers-module",
   "devDependencies": {
     "jshint": "*",
     "jshint-stylish": "*",
