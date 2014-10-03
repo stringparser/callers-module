@@ -1,6 +1,6 @@
 {
   "name": "callers-module",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "v8 callsite-based caller's module with knobs",
   "main": "index.js",
   "engines": {
