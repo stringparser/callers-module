@@ -1,6 +1,6 @@
 {
   "name": "callers-module",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "caller's module information with knobs",
   "main": "index.js",
   "engines": {
