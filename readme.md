@@ -16,15 +16,17 @@
 var path = require('path');
 var callersModule = require('callers-module');
 
-// mocha test/fileName.js
+// $ mocha test/fileName.js
 module.exports = function(){
-  console.log(callersModule());
-  // => {
-  //    module : 'mocha',
-  //     scope : 'mocha/lib',
-  //      path : 'node_modules/mocha/lib/runnable.js',
-  //  location : 'node_modules/mocha/lib/runnable.js:249:21'
-  // };
+  it('should give callers module', function(){
+    console.log(callersModule());
+    // => {
+    //    module : 'mocha',
+    //     scope : 'mocha/lib',
+    //      path : 'node_modules/mocha/lib/runnable.js',
+    //  location : 'node_modules/mocha/lib/runnable.js:249:21'
+    // };
+  })
 }
 ```
 
