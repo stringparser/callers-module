@@ -1,14 +1,12 @@
 'use strict';
 
 var path = require('path');
-var type = require('utils-type');
 var callsites = require('v8-callsites');
 
 var wd = process.cwd();
 
 function callersModule(frames, origin){
 
-  frames = origin ? 1 : (type(frames).integer || 0) + 2;
   var stack = callsites(frames, origin || callersModule);
   var frame = stack[stack.length-1];
 
