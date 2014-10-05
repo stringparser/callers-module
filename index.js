@@ -20,8 +20,8 @@ function callersModule(frames, origin){
 
   var moduleName, scopeName;
   if( filename.replace(ext, '') === base ){
-     // ^ path === 'file.js' || path === 'moduleName'
-     //   can only be so for node core or V8 modulesnpm
+    // possible if node core or V8 module
+
      moduleName = base;
       scopeName = frame.isNative() ? 'V8' : 'node';
 
