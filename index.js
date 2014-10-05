@@ -10,16 +10,15 @@ function callersModule(frames, origin){
   var stack = callsites(frames, origin || callersModule);
   var frame = stack[stack.length-1];
 
+  var file = frame.getFileName();
   var line = frame.getLineNumber();
-  var filename = frame.getFileName();
   var column = frame.getColumnNumber();
-  var location = filename + ':' + line + ':' + column;
 
-  var ext = path.extname(filename);
-  var base = path.basename(filename, ext);
+  var ext = path.extname(file);
+  var base = path.basename(file, ext);
 
   var moduleName, scopeName;
-  if( filename.replace(ext, '') === base ){
+  if( file.replace(ext, '') === base ){
     // possible if node core or V8 module
 
      moduleName = base;
@@ -28,23 +27,23 @@ function callersModule(frames, origin){
     return {
        module : moduleName,
         scope : scopeName,
-         path : filename,
-     location : location
+         path : file,
+     location : file + ':' + line + ':' + column
     };
   }
 
-  var dir = filename.split(path.sep);
+  var dir = file.split(path.sep);
   var index = dir.indexOf('node_modules');
   if( index < 0 ){ // is your code
 
     moduleName = path.relative( path.resolve(wd, '..'), wd);
-     scopeName = path.relative( wd, path.dirname(filename)) || './.';
+     scopeName = path.relative( wd, path.dirname(file)) || './.';
 
     return {
        module : moduleName,
         scope : scopeName,
-         path : filename,
-     location : location
+         path : file,
+     location : file + ':' + line + ':' + column
     };
   } // then its in `node_modules`
 
@@ -61,8 +60,8 @@ function callersModule(frames, origin){
   return {
      module : moduleName,
       scope : scopeName,
-       path : filename,
-   location : location
+       path : file,
+   location : file + ':' + line + ':' + column
   };
 }
 
