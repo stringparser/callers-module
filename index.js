@@ -25,6 +25,13 @@ function callersModule(frames, origin){
      //   can only be so for node core or V8 modules
      moduleName = base;
       scopeName = frame.isNative() ? 'V8' : 'node';
+
+    return {
+       module : moduleName,
+        scope : scopeName,
+         path : filename,
+     location : location
+    };
   }
 
   var dir = filename.split(path.sep);
