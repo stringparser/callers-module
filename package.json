@@ -1,6 +1,6 @@
 {
   "name": "callers-module",
-  "version": "0.9.12",
+  "version": "0.9.13",
   "description": "caller's module information with knobs",
   "main": "index.js",
   "engines": {
@@ -34,7 +34,7 @@
     "should": "*"
   },
   "dependencies": {
-    "utils-type": "^0.1.35",
+    "utils-type": "^0.1.36",
     "v8-callsites": "^1.0.30"
   },
   "scripts": {
