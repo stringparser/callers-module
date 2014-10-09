@@ -1,6 +1,6 @@
 {
   "name": "callers-module",
-  "version": "0.9.13",
+  "version": "0.9.14",
   "description": "caller's module information with knobs",
   "main": "index.js",
   "engines": {
@@ -34,8 +34,8 @@
     "should": "*"
   },
   "dependencies": {
-    "utils-type": "^0.1.36",
-    "v8-callsites": "^1.0.30"
+    "utils-type": "^0.5.2",
+    "v8-callsites": "^1.0.35"
   },
   "scripts": {
     "lint": "jshint test index.js --reporter node_modules/jshint-stylish/stylish.js --exclude node_modules",
